@@ -16,13 +16,14 @@ class App extends StatelessWidget {
   }
 }
 
+//vscode注释提交
 class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          title: Text('标题：你好,提交git'),
+          title: Text('标题：你好'),
           elevation: 8,
         ),
         body: ListView.builder(
