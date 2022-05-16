@@ -16,8 +16,6 @@ class App extends StatelessWidget {
   }
 }
 
-//vscode注释提交
-//vscode注释提交
 class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
