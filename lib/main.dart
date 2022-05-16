@@ -22,7 +22,7 @@ class home extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          title: Text('标题：你好'),
+          title: Text('标题：你好,提交git'),
           elevation: 8,
         ),
         body: ListView.builder(
