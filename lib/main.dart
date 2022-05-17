@@ -22,7 +22,7 @@ class home extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          title: Text('标题：你好'),
+          title: const Text('标题：你好'),
           elevation: 8,
         ),
         body: ListView.builder(
@@ -36,18 +36,18 @@ class home extends StatelessWidget {
     return Container(
       color: Colors.white,
       //EdgeInsets 边缘
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       //Column 柱子？竖向排列
       child: Column(
         children: <Widget>[
           Image.network(posts[position].imageUrl),
           const SizedBox(height: 16),
           Text(
-            '标题：' + posts[position].title,
+            '标题：${posts[position].title}',
             style: Theme.of(context).textTheme.titleLarge,
           ),
           Text(
-            '作者：' + posts[position].auther,
+            '作者：${posts[position].auther}',
             style: Theme.of(context).textTheme.subtitle2,
           ),
           const SizedBox(
