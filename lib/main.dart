@@ -1,3 +1,4 @@
+import 'package:dyxflutter/demo/BasicDemo.dart';
 import 'package:dyxflutter/demo/DrawerDemo.dart';
 import 'package:dyxflutter/demo/ListviewDemo.dart';
 import 'package:flutter/material.dart';
@@ -72,7 +73,7 @@ class home extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             ListViewDemo(),
-            Icon(Icons.location_history, size: 128.0, color: Colors.black),
+            BasicDemo(),
             Icon(Icons.local_airport, size: 128.0, color: Colors.black),
           ],
         ),
