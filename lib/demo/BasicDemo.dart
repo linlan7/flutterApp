@@ -15,11 +15,11 @@ class ContainerDemo extends StatelessWidget {
       // color: Colors.grey[200],
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: NetworkImage('https://wx4.sinaimg.cn/large/0069TDIhly1gz2wbmy0ldj343b64ux75.jpg'),
+            image: NetworkImage('https://wx1.sinaimg.cn/mw2000/005FG1EDgy1h271xcw58tj34a02r1he0.jpg'),
             alignment: Alignment.topCenter,///相对于这个BoxDecoration副布局的位置
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
-                       Colors.blueAccent[100]!.withOpacity(0.6),
+                       Colors.green[100]!.withOpacity(0.6),
                        BlendMode.hardLight
                    ),
         ),
