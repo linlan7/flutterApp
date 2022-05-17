@@ -15,6 +15,7 @@ class App extends StatelessWidget {
     );
   }
 }
+
 //AS提交
 class home extends StatelessWidget {
   @override
@@ -47,7 +48,7 @@ class home extends StatelessWidget {
             style: Theme.of(context).textTheme.titleLarge,
           ),
           Text(
-            '作者：${posts[position].auther}',
+            '作者：${posts[position].author}',
             style: Theme.of(context).textTheme.subtitle2,
           ),
           const SizedBox(
