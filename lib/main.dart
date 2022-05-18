@@ -1,6 +1,9 @@
 import 'package:dyxflutter/demo/BasicDemo.dart';
 import 'package:dyxflutter/demo/DrawerDemo.dart';
+import 'package:dyxflutter/demo/LayoutDemo.dart';
 import 'package:dyxflutter/demo/ListviewDemo.dart';
+import 'package:dyxflutter/demo/SliverDemo.dart';
+import 'package:dyxflutter/demo/ViewDemo.dart';
 import 'package:flutter/material.dart';
 
 import 'demo/BottomNavigationBarDemo.dart';
@@ -29,14 +32,12 @@ class App extends StatelessWidget {
 //AS提交
 class home extends StatelessWidget {
 
-
-
   @override
   Widget build(BuildContext context) {
 
     //Tab标签控制器
     return DefaultTabController(
-      length: 3, //标签数量
+      length: 4, //标签数量
       child: Scaffold(
         //标签内容
         backgroundColor: Colors.grey[100],
@@ -66,7 +67,8 @@ class home extends StatelessWidget {
             tabs: <Widget>[
               Tab(icon: Icon(Icons.local_florist)),
               Tab(icon: Icon(Icons.location_history)),
-              Tab(icon: Icon(Icons.local_airport))
+              Tab(icon: Icon(Icons.local_airport)),
+              Tab(icon: Icon(Icons.view_quilt))
             ],
           ),
         ),
@@ -74,7 +76,9 @@ class home extends StatelessWidget {
           children: <Widget>[
             ListViewDemo(),
             BasicDemo(),
-            Icon(Icons.local_airport, size: 128.0, color: Colors.black),
+            LayoutDemo(),
+            SliverDemo(),
+            // Icon(Icons.local_airport, size: 128.0, color: Colors.black)Icon(Icons.local_airport, size: 128.0, color: Colors.black),
           ],
         ),
         drawer:drawerDemo(),
@@ -83,5 +87,6 @@ class home extends StatelessWidget {
     );
   }
 }
+
 
 

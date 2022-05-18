@@ -13,6 +13,7 @@ class BottomNavigationBarDemoState extends State<BottonnavigationBarDemo>{
   int currentIndex = 0;
 
   void onTapListener(int index){
+
       setState((){
         currentIndex=index;
       });
@@ -34,4 +35,6 @@ class BottomNavigationBarDemoState extends State<BottonnavigationBarDemo>{
    );
   }
 }
+
+
 
