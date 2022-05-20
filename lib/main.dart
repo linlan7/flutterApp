@@ -1,16 +1,17 @@
+import 'package:dyxflutter/configure/configure.dart';
 import 'package:dyxflutter/demo/BasicDemo.dart';
 import 'package:dyxflutter/demo/DrawerDemo.dart';
+import 'package:dyxflutter/demo/FormDemo.dart';
 import 'package:dyxflutter/demo/LayoutDemo.dart';
 import 'package:dyxflutter/demo/ListviewDemo.dart';
+import 'package:dyxflutter/demo/NavigatorDemo.dart';
 import 'package:dyxflutter/demo/SliverDemo.dart';
 import 'package:dyxflutter/demo/ViewDemo.dart';
 import 'package:flutter/material.dart';
-
 import 'demo/BottomNavigationBarDemo.dart';
 
 //return缩写 只有一行代码，或者返回使用 => fun();
 void main() => runApp(App());
-
 //无状态小部件  StatelessWidget
 //有状态小部件  StatefulWidget
 class App extends StatelessWidget {
@@ -18,12 +19,20 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //debug条幅
-      home: home(),
+      initialRoute: '/Form',
+      routes: {
+        '/':(context)=>NavigatorDemo(),
+        '/About':(context)=>PageDemo(titile: "About",),
+        '/Home':(context)=>home(),
+        '/Form':(context)=>FormDemo(),
+      },
+      // home: NavigatorDemo(),
       theme: ThemeData(
         primarySwatch: Colors.green,
         // highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         highlightColor: Colors.transparent, //点按高亮颜色（所有的material库中）
         splashColor: Colors.transparent, //点击水波纹效果颜色(所有的material库中）
+        accentColor: Colors.green
       ),
     );
   }

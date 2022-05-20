@@ -6,6 +6,7 @@ import '../model/post.dart';
 class SliverDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       ///自定义滚动视图  CustomScrollView
       body: CustomScrollView(
@@ -14,17 +15,21 @@ class SliverDemo extends StatelessWidget {
             //AppBarlayout,页面顶部标题
             // title: Text("你好Flitter"),
             floating: true, //不同模式，向下滑动出现，向上滑动消失
-            expandedHeight: 178.0,
+            expandedHeight: 200.0,
+            pinned: true,//当SliverAppBar内容滑出屏幕时，将始终渲染一个固定在顶部的收起状态
             flexibleSpace: FlexibleSpaceBar(
               background: Image.network(posts[6].imageUrl,fit: BoxFit.cover,),
-              title: Text(
-                "你好Flitter".toUpperCase(),
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 3.0,
+              title: Visibility(
+                visible: true,
+                child: Text(
+                  "你好Flitter".toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 3.0,
+                  ),
                 ),
-              ),
+              )
             ),
           ),
           SliverSafeArea(
